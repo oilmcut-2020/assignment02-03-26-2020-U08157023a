@@ -1,0 +1,84 @@
+// Addition program that displays the sum of two numbers.
+public class Main {
+
+
+
+ public static void main(String[] args) {
+
+  showPrime(100); 
+
+ 
+
+ }
+
+
+
+ 
+
+
+
+ 
+
+ public static void showPrime(int k){
+
+  int[] prime = new int[(k+1)/2];  
+
+  prime[0] = 2;//the first prime is 2
+
+  int pCount=0;
+
+  int count=0;
+
+  boolean isPrime=true;
+
+  for(int i=2;i<=k;i++){
+
+   
+
+   isPrime=true;
+
+   for(int j=0;prime[j]<=Math.sqrt(i);j++){
+
+    
+
+    if(i%prime[j]==0){
+
+     isPrime=false;
+
+     break;
+
+    }
+
+   }
+
+   if(isPrime){
+
+    prime[pCount]=i;
+
+    pCount++;
+
+    System.out.print(i+"\t");
+
+    count++;
+
+    if(count%10==0){//create new line per 10 numbers
+
+     System.out.println("");
+
+    }
+
+      
+
+   }
+
+     
+
+  }
+
+  
+
+ }
+
+ 
+
+}
